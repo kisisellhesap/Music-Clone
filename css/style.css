@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*  general css code */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+:root {
+  --black: #000000;
+  --soft-black: #121212;
+  --soft-gray: #282828;
+  --green: #18d860;
+  --b-radius: 8px;
+  --white: whitesmoke;
+}
+
+body {
+  background-color: var(--black);
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  gap: 1rem;
+  height: 88vh;
+  padding: 1.5rem;
+}
+
+/* aside */
+
+.music-aside {
+  max-width: 228px;
+  background-color: var(--soft-gray);
+  padding: 1rem;
+  border-radius: var(--b-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+
+.header-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-banner img {
+  width: 40px;
+}
+.header-banner h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+nav a {
+  display: flex;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--white);
+  transition: all 0.4s ease;
+  padding: 0.5rem;
+  border-radius: var(--b-radius);
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  background-color: var(--green);
+  color: var(--soft-black);
+}
+
+/* music container */
+
+.music-container {
+  width: 100%;
+  background-color: var(--soft-gray);
+  padding: 1rem;
+  border-radius: var(--b-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.music-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--soft-black);
+  padding: 1rem;
+  border-radius: var(--b-radius);
+  height: 10%;
+  gap: 1rem;
+}
+
+.search-div {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  background-color: var(--soft-black);
+  border-radius: var(--b-radius);
+  box-shadow: 1px 1px 5px 0px rgba(255, 255, 255, 0.1);
+}
+.search-div input {
+  width: 100%;
+  padding-left: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  color: var(--white);
+}
+.search-div input::placeholder {
+  color: var(--white);
+  font-size: 0.7rem;
+}
+
+.search-div i {
+  padding: 0.5rem 1rem;
+  color: var(--white);
+}
+
+.other-btns {
+  display: flex;
+  gap: 1rem;
+}
+.other-btns a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.other-btns a:hover {
+  color: white;
+}
+
+.music-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 90%;
+  overflow-y: scroll;
+}
+.content-title {
+  color: var(--white);
+}
+
+.music-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.music-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  background-color: var(--soft-black);
+  border-radius: var(--b-radius);
+  cursor: pointer;
+  position: relative;
+}
+
+.m-card-play-icon {
+  right: 20px;
+  bottom: 50px;
+  position: absolute;
+  font-size: 1.5rem;
+  color: var(--white);
+  background-color: var(--green);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.music-card:hover .m-card-play-icon {
+  opacity: 1;
+  bottom: 90px;
+}
+
+.m-card-play-icon:hover {
+  transform: scale(1.1);
+  background-color: #108b3f;
+}
+
+.card-img-container {
+  border-radius: var(--b-radius);
+  overflow: hidden;
+  max-height: 250px;
+}
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.music-card h3 {
+}
+.music-card h3,
+.music-card p {
+  color: var(--white);
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--white);
+  border-radius: var(--b-radius);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--soft-black);
+  cursor: pointer;
+  border-radius: var(--b-radius);
+}
+
+/* footer */
+footer {
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 1.5rem;
+  gap: 1.5rem;
+}
+
+.footer-songs-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-songs-info img {
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: turn 2s infinite linear;
+}
+
+@keyframes turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.info-titles h3,
+.info-titles p {
+  color: var(--white);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.footer-songs-play {
+  max-width: 500px;
+  width: 100%;
+}
+
+.footer-songs-play audio {
+  width: 100%;
+}
+
+.footer-other-settings {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.footer-other-settings i {
+  color: var(--white);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+  .music-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 14px;
+  }
+
+  .music-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .music-header {
+    gap: 0;
+  }
+  .search-div {
+    max-width: none;
+  }
+
+  nav a i {
+    font-size: 1.2rem;
+  }
+
+  nav a,
+  .header-banner {
+    justify-content: center;
+  }
+  .header-banner h1,
+  nav a span,
+  .other-btns a,
+  .footer-other-settings {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .music-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  .music-aside,
+  .music-container,
+  main,
+  footer {
+    padding: 0.5rem;
+  }
+  main {
+    gap: 0.5rem;
+  }
+
+  .music-aside nav {
+    gap: 1rem;
+  }
+  .music-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer-songs-info img {
+    width: 40px;
+  }
+
+  .info-titles h3,
+  .info-titles p {
+    font-size: 0.7rem;
+  }
+  audio {
+    height: 40px;
+  }
+}

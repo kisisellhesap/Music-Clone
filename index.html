@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/icon.png" />
+
+    <title>Spotify</title>
+  </head>
+  <body>
+    <main>
+      <aside class="music-aside">
+        <div class="header-banner">
+          <img src="./img/icon.png" alt="icon-logo" />
+          <h1>Spotify</h1>
+        </div>
+
+        <nav>
+          <a href="#" class="home"
+            ><i class="bi bi-house"></i> <span>Anasayfa</span></a
+          >
+          <a href="#"> <i class="bi bi-search"></i><span>Arama</span></a>
+          <a href="#"
+            ><i class="bi bi-collection"></i> <span>Kütüphane</span></a
+          >
+          <a href="#"
+            ><i class="bi bi-music-note-list"></i>
+            <span>Çalma Listeleri</span></a
+          >
+          <a href="#"
+            ><i class="bi bi-heart"></i> <span>Beğenilen Şarkılar</span></a
+          >
+        </nav>
+      </aside>
+
+      <section class="music-container">
+        <header class="music-header">
+          <div class="search-div">
+            <input type="text" placeholder="müzik arayın..." />
+            <i class="bi bi-search"></i>
+          </div>
+
+          <div class="other-btns">
+            <a href="#">Premium</a>
+            <a href="#">Destek</a>
+            <a href="#">Oturum Aç</a>
+          </div>
+        </header>
+
+        <div class="music-content">
+          <h2 class="content-title">Popüler Müzikler</h2>
+          <div class="music-list">
+            <!-- <div class="music-card">
+              <i class="bi bi-play-fill" id="m-card-play-icon"></i>
+              <div class="card-img-container">
+                <img
+                  src="https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/f1/95/04/f1950424-2ae5-55ff-580d-d52e8300ec1b/dj.iedkotfi.jpg/400x400cc.jpg"
+                  alt=""
+                />
+              </div>
+
+              <h3>Song Title</h3>
+              <p>Artist Name</p>
+            </div> -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-songs-info">
+        <img
+          src="https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/28/0b/3d/280b3db9-c05f-8cc5-1e01-6fcbe1291f3a/cover.jpg/400x400cc.jpg"
+          alt=""
+          class="footer-img"
+        />
+
+        <div class="info-titles">
+          <h3 class="song-title">Özünde Narin</h3>
+          <p class="artist-name">Beyaz Hayvanlar</p>
+        </div>
+      </div>
+
+      <div class="footer-songs-play">
+        <audio controls="">
+          <source
+            src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ba/6a/c7/ba6ac72e-0ddb-9f70-900f-975b4867a649/mzaf_6073114195267296960.plus.aac.ep.m4a"
+          />
+        </audio>
+      </div>
+
+      <div class="footer-other-settings">
+        <i class="bi bi-music-note-list"></i>
+        <i class="bi bi-boombox-fill"></i>
+        <i class="bi bi-pc-display"></i>
+      </div>
+    </footer>
+
+    <script src="./js/script.js" type="module"></script>
+  </body>
+</html>
